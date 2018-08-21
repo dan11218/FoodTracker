@@ -1,0 +1,16 @@
+PODS:
+  - Usabilla (5.0.2)
+
+DEPENDENCIES:
+  - Usabilla (~> 5.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Usabilla
+
+SPEC CHECKSUMS:
+  Usabilla: 3c37e6e9054e78418073b14387f68da4a510e9a4
+
+PODFILE CHECKSUM: fdaae1b287af32f07121d8b949ea0d00bdcea694
+
+COCOAPODS: 1.5.3
