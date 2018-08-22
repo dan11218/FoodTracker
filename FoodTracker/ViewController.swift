@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  FoodTracker
 //
-//  Created by Jane Appleseed on 10/17/16.
+//  Created by Daniel Graugnard on 8/22/18.
 //  Copyright © 2016 Apple Inc. All rights reserved.
 //
 

@@ -13,6 +13,7 @@
 		5C6E8D6021079E3B00C45DB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6E8D5E21079E3B00C45DB0 /* Main.storyboard */; };
 		5C6E8D6221079E3E00C45DB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6E8D6121079E3E00C45DB0 /* Assets.xcassets */; };
 		5C6E8D6521079E3E00C45DB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6E8D6321079E3E00C45DB0 /* LaunchScreen.storyboard */; };
+		5CF259FF212CA2D30015629C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF259FE212CA2D30015629C /* Meal.swift */; };
 		80A9DC072ECBC50AA6ED931E /* Pods_FoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E62ABCED20277930F68D71 /* Pods_FoodTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		5C6E8D6121079E3E00C45DB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C6E8D6421079E3E00C45DB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C6E8D6621079E3E00C45DB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF259FE212CA2D30015629C /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		91E62ABCED20277930F68D71 /* Pods_FoodTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0ABF30E7C79A9E7EA19C711 /* Pods-FoodTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTracker/Pods-FoodTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 			children = (
 				5C6E8D5A21079E3B00C45DB0 /* AppDelegate.swift */,
 				5C6E8D5C21079E3B00C45DB0 /* ViewController.swift */,
+				5CF259FE212CA2D30015629C /* Meal.swift */,
 				5C2B22322118DA22000D4B64 /* RatingControl.swift */,
 				5C6E8D5E21079E3B00C45DB0 /* Main.storyboard */,
 				5C6E8D6121079E3E00C45DB0 /* Assets.xcassets */,
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF259FF212CA2D30015629C /* Meal.swift in Sources */,
 				5C6E8D5D21079E3B00C45DB0 /* ViewController.swift in Sources */,
 				5C2B22332118DA22000D4B64 /* RatingControl.swift in Sources */,
 				5C6E8D5B21079E3B00C45DB0 /* AppDelegate.swift in Sources */,
