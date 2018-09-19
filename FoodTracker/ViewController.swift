@@ -3,10 +3,12 @@
 //  FoodTracker
 //
 //  Created by Daniel Graugnard on 8/22/18.
-//  Copyright © 2016 Apple Inc. All rights reserved.
+//  Copyright © 2018 Apple Inc. All rights reserved.
 //
 
 import UIKit
+
+import Usabilla
 
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -21,13 +23,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
+        
+        //Allow Usabilla Campaigns
+        Usabilla.canDisplayCampaigns = true;
+
     }
     
     //MARK: UITextFieldDelegate
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
-        textField.resignFirstResponder()
+        textField.resignFirstResponder();
         return true
     }
     
@@ -36,9 +41,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     //MARK: UIImagePickerControllerDelegate
+    //Closes the image picker
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        // Dismiss the picker if the user canceled.
+        // Dismiss the image picker if the user canceled.
         dismiss(animated: true, completion: nil)
+        
+        // Send event to Usabilla
+        Usabilla.sendEvent(event: "dog")
+        
+        //Reset campaign data for testing app
+        Usabilla.resetCampaignData(completion: nil);
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
