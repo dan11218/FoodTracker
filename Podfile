@@ -6,6 +6,6 @@ target 'FoodTracker' do
   use_frameworks!
 
   # Pods for FoodTracker
-  pod 'Usabilla', '~> 5.0'
+  pod 'Usabilla', '~> 6.2.0'
 
 end

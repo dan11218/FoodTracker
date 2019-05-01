@@ -16,13 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         Usabilla.initialize(appID: "badcf3a9-d07c-4ad5-88cd-0c7c3bf2bf69")
-        
+       
         //Your form ID is: 5b2c08070f37bb701b5625fd
-        
-        // Override point for customization after application launch.
+
         return true
     }
    

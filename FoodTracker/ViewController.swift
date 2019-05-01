@@ -26,8 +26,22 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         
         //Allow Usabilla Campaigns
         Usabilla.canDisplayCampaigns = true;
+        
+        //Enable the Usabilla debugger
+        Usabilla.debugEnabled = false
+        
+        Usabilla.loadFeedbackForm("5bad2f22b07f24195526448e")
 
     }
+    
+    //Called when your form succesfully load
+    func formDidLoad(form: UIViewController) {
+        present(form, animated: true, completion: nil)
+    }
+
+    
+    // Campaign Submission Callback
+    func campaignDidClose(withFeedbackResult result: FeedbackResult, isRedirectedToAppStoreEnabled: Bool){}
     
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -46,17 +60,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Dismiss the image picker if the user canceled.
         dismiss(animated: true, completion: nil)
         
-        // Send event to Usabilla
-        Usabilla.sendEvent(event: "dog")
-        
+        // Send event to Usabilla        
+        Usabilla.sendEvent(event: "doggo")
+
         //Reset campaign data for testing app
         Usabilla.resetCampaignData(completion: nil);
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         
         // The info dictionary may contain multiple representations of the image. You want to use the original.
-        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+        guard let selectedImage = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         
@@ -86,3 +103,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+    return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+    return input.rawValue
+}
